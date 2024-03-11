@@ -220,7 +220,7 @@ async function download_pulldownMenu(companyNumber) {
   /* プルダウンメニューをiframeから取得する。会社番号を引数に渡す。*/
   try {
     const pulldownListIframe =
-      document.getElementById("プルダウンメニュー_上町開発");
+      document.getElementById("NKRFSV2.6_プルダウンメニュー管理");
     const pulldownListDom =
       pulldownListIframe.contentWindow.document.getElementsByTagName("tbody")[0]
         .childNodes;
@@ -290,7 +290,7 @@ async function download_pulldownMenu(companyNumber) {
     if (!isCompanyMatch) {
       throw new Error("company number is not registered");
     }
-    removeSectionDom("プルダウンメニュー_上町開発"); // sectionごと削除
+    removeSectionDom("NKRFSV2.6_プルダウンメニュー管理"); // sectionごと削除
     clearInterval(DOWNLOAD_PULLDOWN); //非同期処理を削除
   } catch (e) {
   } finally {
@@ -300,7 +300,7 @@ async function download_pulldownMenu(companyNumber) {
   if (EXTRACT_COUNTER > 30) {
     clearInterval(DOWNLOAD_PULLDOWN);
     console.log("error: pulldown menu couldn't be downloaded.");
-    removeSectionDom("プルダウンメニュー_上町開発"); // sectionごと削除
+    removeSectionDom("NKRFSV2.6_プルダウンメニュー管理"); // sectionごと削除
   }
 }
 
@@ -309,7 +309,7 @@ async function change_calendar() {
   try {
     const KIframe = document.getElementById("給与計算カレンダー");
     const JIframe = document.getElementById("助成金カレンダー");
-    const calendarSpace = document.getElementById("nullカレンダー_上町開発"); //開発用。変更必要
+    const calendarSpace = document.getElementById("NKRFSV2.6_カレンダースペース"); //開発用。変更必要
     const calendarSpaceParent = calendarSpace.parentNode;
     let KSection = KIframe;
     let JSection = JIframe;
