@@ -1,0 +1,46 @@
+@charset “utf-8”;
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.NKRTopMenuBox {
+	width: 100%;
+	text-align: center; 
+}
+
+.NKRTopMenu {
+	padding: 0;
+	margin: 0;
+	text-align: center; 
+}
+
+.imgBox{/*親のイメージBOX*/
+	float: left;
+	overflow: visible;/*あふれた分ははみ出させる*/
+}
+
+//.NKRTopMenu section {   /* PC用ダッシュボードのボタン */
+//	width: 9%;
+//	margin:0;
+//	padding:1px;
+//	vertical-align: middle;/*display:blockの要素には指定不可*/
+//	text-align:center;
+//	display: inline-block; /*(必須)横並び */
+//	font-size: 1vw;
+//}
+
+.NKR-menu-item {   /* PC用ダッシュボードのボタン */
+	width: 9%;
+	margin:0;
+	padding:1px;
+	vertical-align: middle;/*display:blockの要素には指定不可*/
+	text-align:center;
+	display: inline-block; /*(必須)横並び */
+	font-size: 1vw;
+}
+.NKRTopMenu a:hover{
+	opacity: 0.7;
+	transition: 0.3s;
+}
+

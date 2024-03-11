@@ -1,0 +1,44 @@
+@charset “utf-8”;
+
+.nkr-employees-suggestions-list ul{
+    padding-left: 10%;
+}
+
+.nkr-employees-suggestions-list li{
+    cursor: pointer;
+    list-style: none;
+    text-align: left;
+    transition: background-color 0.1s ease;
+}
+
+.nkr-employees-suggestions-list li:hover{
+    background-color: #9d9c9c;
+}
+
+.nkr-dialog-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nkr-dialog-CancelButton {
+    margin-left: auto;
+}
+
+.nkr-dialog-title {
+    text-align: center;
+    font-size: 18px;
+    margin: 2%;
+    font-weight: bold;
+}
+
+.nkr-employees-suggestions-name {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.nkr-employees-suggestions-number {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}

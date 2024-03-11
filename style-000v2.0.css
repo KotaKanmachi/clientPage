@@ -1,0 +1,156 @@
+
+@charset “utf-8”;
+
+.ql-editor app-frame__non-view {
+	font-size: 24px !important;
+	padding: 30px 30px !important;
+}
+
+.ql-editor app-frame__non-view {
+	padding: 0px !important;
+}
+
+.ql-editor a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.nkr-pulldownMenu{
+	background: #f0f8ff;
+	border: 1px dotted #808080 ;
+	padding: 0% 1% 0% 1%;		/*上右下左*/
+	position: absolute;
+	width : 15%;
+	z-index: 10000;
+}
+
+.nkr-pulldownMenu li{
+	border-bottom: 1px dotted #808080 ;
+	list-style: none;
+	padding-left: 5%;
+	text-align: left;
+}
+
+.nkr-pulldownMenu  li a {
+	color: #333;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nkr-pulldownMenu li:hover{
+	background: #9d9c9c;	/*#3a9ed8  #9d9c9c*/
+	color:black;
+	font-weight: bold;
+}
+
+@scope (.nkr-pulldownMenu#入社連絡){
+	:scope li:nth-child(n+5){
+		background:lch(91 16.8 218.16);
+	}
+}
+
+@scope (dialog#入社連絡の追記・修正){
+	:scope li:nth-child(n+5){
+		background: none;
+	}
+}
+
+@scope (.nkr-pulldownMenu#人事履歴){
+	:scope li:nth-child(n+1){
+		background:lch(91 16.8 218.16);
+	}
+}
+
+@scope (dialog#人事管理){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#人事及び給与管理){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+
+@scope (dialog#雇用契約書更新){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+
+@scope (dialog#アレルギー情報管理){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#アレルギー発症履歴){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#資格証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#各種証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#労働条件通知書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#在籍証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#資格証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#辞令作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#労働者名簿作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#退職証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#解雇理由証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
+
+@scope (dialog#各種証明書作成・印刷){
+	:scope li:nth-child(n+1){
+		background: none;
+	}
+}
