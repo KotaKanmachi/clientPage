@@ -94,9 +94,21 @@ async function name_id() {
     }
     clearInterval(NAME_ID); //非同期処理を削除
     EXTRACT_COUNTER = 1; //カウンターリセット
+    if (IS_MOBILE) {
+      const sections = document.getElementsByTagName("section");
+      const sectionLength = sections.length
+      for (let i = sectionLength - 1; i > -1; i--) {
+        if (sections[i].classList.contains("NKRMobileTopMenu") || sections[i].getElementsByTagName("iframe")[0].id === "社員名簿＆各種連絡" || sections[i].getElementsByTagName("iframe")[0].id === "プルダウン管理" || sections[i].getElementsByTagName("iframe")[0].id === "NKRFSV2.6_プルダウンメニュー管理") {
+          continue;
+        }
+        sections[i].remove();
+      }
+      document.getElementsByClassName("ui header")[0].remove();
+    } else {
+      CHANGE_CALENDAR = setInterval(change_calendar, 100); //非同期処理を開始
+    }
     ADD_HEADER_INFO = setInterval(add_header_info, 100); //非同期処理を開始
     GET_LIST = setInterval(get_list, 100); //非同期処理を開始
-    CHANGE_CALENDAR = setInterval(change_calendar, 100); //非同期処理を開始
     return;
   } catch (e) {
   } finally {
@@ -144,7 +156,7 @@ async function add_header_info() {
     wrappedHeaderText.textContent = textInfo;
     wrappedHeaderText.className = HEADER_COMPANY_INFOMATION_CLASSNAME;
     if (IS_MOBILE) {
-      document.getElementById("nkr-footer").appendChild(wrappedCompanyInfoText);
+      document.getElementById("nkr-footer").appendChild(wrappedHeaderText);
     } else {
       document
         .getElementsByClassName("ui large inverted pointing menu")[0]
@@ -290,8 +302,12 @@ async function download_pulldownMenu(companyNumber) {
     if (!isCompanyMatch) {
       throw new Error("company number is not registered");
     }
+    
     removeSectionDom("NKRFSV2.6_プルダウンメニュー管理"); // sectionごと削除
     clearInterval(DOWNLOAD_PULLDOWN); //非同期処理を削除
+    if (IS_MOBILE) {
+      document.getElementsByTagName("section")[1].remove();
+    }
   } catch (e) {
   } finally {
     EXTRACT_COUNTER++;

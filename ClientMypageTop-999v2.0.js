@@ -31,7 +31,7 @@ function TopMenu() {
   str += '<ul class="NKR-menu-button-list">';
   str += '<li id="nkr-menu-button1" class="NKR-menu-item">';
   str +=
-    '<div class="imgBox"><a class="nkr-svg-link"><img src="' +
+    '<div class="imgBox"><a class="nkr-svg-link" href="#"><img src="' +
     ico1 +
     '" width="100%" height="100%"></a></div>';
   str += "</li>";

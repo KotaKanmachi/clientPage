@@ -42,3 +42,21 @@
     width: 50%;
     text-align: left;
 }
+
+@media only screen and (max-width: 600px) {
+    .nkr-employees-suggestions-list li{
+        cursor: pointer;
+        list-style: none;
+        transition: background-color 0.1s ease;
+    }
+
+    .nkr-employees-suggestions-name {
+        display: inline-block;
+        width: 50%;
+    }
+    
+    .nkr-employees-suggestions-number {
+        display: inline-block;
+        width: 50%;
+    }
+}
