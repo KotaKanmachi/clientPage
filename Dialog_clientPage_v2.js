@@ -8,21 +8,20 @@ const EMPLOYEES_SUGGESTIONS_NAME_CLASSNAME = "nkr-employees-suggestions-name";
 const EMPLOYEES_SUGGESTIONS_NUMBER_CLASSNAME =
   "nkr-employees-suggestions-number";
 let IS_MOBILE = false;
-let IS_TABLET = false;
 
 (function() {
+  // 表示端末の幅を取得
+  const screenWidth = window.innerWidth;
+  
+  // 判定のための閾値
+  const mobileWidthThreshold = 600; // モバイルとPCの境界となる幅
+
   // 表示端末の判定
-  const ua = navigator.userAgent;
-  if (
-    ua.indexOf("iPhone") > 0 ||
-    ua.indexOf("iPod") > 0 ||
-    (ua.indexOf("Android") > 0 && ua.indexOf("Mobile") > 0)
-  ) {
+  if (screenWidth < mobileWidthThreshold) {
     IS_MOBILE = true;
-  } else if (ua.indexOf("iPad") > 0 || ua.indexOf("Android") > 0) {
-    IS_TABLET = true;
   }
 })();
+
 
 class Dialog_clientPage extends Dialog {
   transition_URL;
@@ -53,8 +52,6 @@ class Dialog_clientPage extends Dialog {
     const ua = navigator.userAgent;
     if (IS_MOBILE) {
       dialog.style.height = "100%";
-    } else if (IS_TABLET) {
-      dialog.style.height = "70%";
     } else {
       dialog.style.height = "70%";
     }
